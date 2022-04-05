@@ -31,10 +31,15 @@ useEffect(() => {
           value={searchInput} 
           onChange={ (e) => (setSearchInput(e.target.value))  } />
       </div>
-      <div className="container">
-        {movie.map( (movie) => <MovieCard movie={movie}/>)}
-        
-      </div>
+      
+        {
+          movie?.lenght > 0 
+          ? (
+            <div className="container">{movie.map( (movie) => <MovieCard movie={movie}/>)} </div>) 
+          : (
+          <div className="empty"><h2>No movies found</h2></div>)
+        }
+
     </div>
   );
 }
