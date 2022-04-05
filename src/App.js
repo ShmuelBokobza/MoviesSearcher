@@ -33,7 +33,7 @@ useEffect(() => {
       </div>
       
         {
-          movie?.lenght > 0 
+          movie?.length > 0 
           ? (
             <div className="container">{movie.map( (movie) => <MovieCard movie={movie}/>)} </div>) 
           : (
